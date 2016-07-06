@@ -1,3 +1,4 @@
 clinfo
 .*.swp
 *.o
+autom4te.cache
