@@ -1,6 +1,6 @@
 AC_INIT(clinfo, 2.1.16.01.12)
 AC_CONFIG_SRCDIR([src/clinfo.c])
-#AM_INIT_AUTOMAKE(bbexample, main)
+AM_INIT_AUTOMAKE([foreign])
 
 # Checks for programs.
 AC_PROG_CC
@@ -21,5 +21,5 @@ AC_ENABLE_SHARED
 # Checks for library functions.
 
 #AC_CONFIG_MACRO_DIR([m4])
-AC_CONFIG_FILES([Makefile])
+AC_CONFIG_FILES([Makefile src/Makefile])
 AC_OUTPUT
