@@ -20,15 +20,16 @@ AC_CHECK_HEADERS([CL/cl.h],
     [AC_MSG_ERROR([Couldn't find OpenCL header])]
 )
 
-AC_SEARCH_LIBS([clEnqueueNDRangeKernel], [OpenCL],
+# Checks for typedefs, structures, and compiler characteristics.
+
+# Checks for library functions.
+AC_SEARCH_LIBS([clGetPlatformInfo], [OpenCL],
     [echo "found"; break;],
     [AC_MSG_ERROR([Couldn't find OpenCL library])]
 )
 
-# Checks for typedefs, structures, and compiler characteristics.
+AM_LDFLAGS = -ldl
 
-# Checks for library functions.
-
-#AC_CONFIG_MACRO_DIR([m4])
+AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_FILES([Makefile src/Makefile])
 AC_OUTPUT

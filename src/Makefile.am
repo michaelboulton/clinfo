@@ -7,3 +7,5 @@ include_HEADERS = error.h ext.h memory.h strbuf.h
 
 bin_PROGRAMS = clinfo
 clinfo_SOURCES = clinfo.c
+
+AM_LDFLAGS = -ldl
