@@ -15,6 +15,15 @@ AC_DISABLE_STATIC
 AC_ENABLE_SHARED
 
 # Checks for header files.
+AC_CHECK_HEADERS([CL/cl.h],
+    [has_opencl_header=yes; break;],
+    [AC_MSG_ERROR([Couldn't find OpenCL header])]
+)
+
+AC_SEARCH_LIBS([clEnqueueNDRangeKernel], [OpenCL],
+    [echo "found"; break;],
+    [AC_MSG_ERROR([Couldn't find OpenCL library])]
+)
 
 # Checks for typedefs, structures, and compiler characteristics.
 
